@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # Define window and elements
     layout = [[sg.Text(text="Enter previous time in format: HHH:MM:SS", key='-TEXT-', justification= 'center', auto_size_text=True, background_color='#121212', text_color='#c3beb6')],
               [sg.Input(key='-INPUT-', background_color='#222222', text_color='#c3beb6')],
-              [sg.Button(button_color="#1f523a", button_text="Start", key="-USE-"), sg.Button(button_color="#9e2626", button_text="Reset")]]
+              [sg.Button(button_color="#1f523a", button_text="Start", key="-USE-"), sg.Button(button_text="Reset", button_color="#9e2626", key='-RESET-')]]
     window = sg.Window("Stop Watch", layout, element_justification='center', background_color='#121212')
 
     # Main function
@@ -51,7 +51,7 @@ if __name__ == "__main__":
             window['-USE-'].update(text='Pause', button_color="gray")
 
         # Completely Reset Timer
-        elif event == 'Reset':
+        elif event == '-RESET-':
             paused = True
             started = False
             # Reset to original setup
