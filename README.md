@@ -1,1 +1,1 @@
-# Python-Stopwatch-App
+# Stopwatch-App
